@@ -1,264 +1,48 @@
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
-$breakpoint-xxl: 1400px;
-
-$spacer-xs: 0.25rem;
-$spacer-sm: 0.5rem;
-$spacer-md: 1rem;
-$spacer-lg: 1.5rem;
+$primary: blue;
+$secondary: darkviolet;
 
 $border-radius: 2rem;
 
-$font-size-xl: 4rem;
-$font-size-lg: 2.5rem;
-$font-size-md: 1.5rem;
-$font-size-sm: 0.75rem;
+$spacer: 1.5rem;
 
-* {
-    margin: 0;
-    padding: 0;
-}
+$m-4: $spacer * 1.5;
 
-body {
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-}
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
 
-section {
-    margin-top: $spacer-lg;
-    margin-bottom: $spacer-lg;
-    width: 100%;
-
-    &:first-child {
-        margin-top: 0;
-    }
-}
-
-h1 {
-    margin-top: $spacer-md;
-    margin-bottom: $spacer-md;
-    font-size: $font-size-lg;
-}
-
-h2 {
-    margin-top: $spacer-sm;
-    margin-bottom: $spacer-sm;
-    font-size: $font-size-lg;
-}
-
-h3 {
-    margin-top: $spacer-sm;
-    margin-bottom: $spacer-sm;
-    font-size: $font-size-md;
-}
-
-p {
-    margin-top: $spacer-sm;
-    margin-bottom: $spacer-sm;
-}
-
-button {
-    border: none;
-    border-radius: $border-radius;
-    padding-top: $spacer-sm;
-    padding-bottom: $spacer-sm;
-    padding-left: $spacer-md;
-    padding-right: $spacer-md;
-    margin-top: $spacer-sm;
-    margin-bottom: $spacer-sm;
-    background-color: blue;
-    color: white;
-    display: flex-inline;
-    justify-content: center;
-    align-items: center;
-    transition: box-shadow 250ms ease-in-out;
-    box-shadow: 2px 3px 10px lightblue;
-
-    &::after {
-        content: ">";
-        margin-left: $spacer-sm;
-    }
-    
-    &:hover {
-        cursor: pointer;
-        box-shadow: 4px 6px 10px lightblue;
-    }
-
-    &.btn--cta {
-        background-color: darkviolet;
-        color: white;
-    }
-
-    &:nth-child(even) {
-        margin-left: $spacer-sm;
-    }
-}
-
-img {
-    width: 100%;
-    object-fit: cover;
-}
-
-.container {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: calc(100% - $spacer-lg * 2);
-}
-
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.col {
-    margin: $spacer-lg 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-
-    &--full-width {
-        width: 100% !important;
-    }
-
-    &--stretch {
-        align-items: stretch;
-    }
-
-    &--justify-content-start {
-        justify-content: start;
-    }
-
-    &--justify-content-end {
-        justify-content: end;
-    }
-
-    &--align-items-center {
-        align-items: center;
-    }
-
-    &--align-items-end {
-        align-items: flex-end;
-    }
-
-    &--padded {
-        padding: $spacer-sm;
-    }
+.navbar-brand {
+    font-size: x-large;
 }
 
 .card {
-    width: 100%;
-    overflow: hidden;
-    border-radius: $border-radius;
-    box-shadow: 5px 10px 20px lightblue;
-}
-
-.card__body {
-    width: 100%;
-}
-
-.card__img {
-    margin: 0;
-    margin-bottom: -3px;
-    width: 100%;
-    height: 250px;
-}
-
-.card__content {
-    background-color: white;
-    margin: 0;
-    padding: $spacer-lg;
-}
-
-.tag {
     border: none;
-    border-radius: $border-radius;
-    padding: $spacer-md;
-    padding-top: $spacer-sm;
-    padding-bottom: $spacer-sm;
-    margin-left: $spacer-sm;
-    color: white;
-    display: flex-inline;
-    justify-content: center;
-    align-items: center;
-    transition: box-shadow 250ms ease-in-out;
-    box-shadow: 1px 2px 3px lightblue;
-    font-size: $font-size-sm;
-    letter-spacing: 0.1rem;
+    box-shadow: 3px 5px 10px lightgray;
+}
 
-    &:first-child {
-        margin-left: 0;
+.btn {
+    box-shadow: 1px 2px 3px lightgray;
+    
+    &-arrow::after {
+        content: ">";
+        margin-left: $spacer;
     }
 }
 
-@media (min-width: $breakpoint-sm) {
-    .container {
-        max-width: 540px;
-    }
-
-    .col:nth-child(0) {
-        margin-top: 0;
-    }
+section {
+    margin-bottom: $m-4;
 }
 
-@media (min-width: $breakpoint-md) {
-    .container {
-        max-width: 720px;
-    }
-
-    .card__img {
-        height: 350px;
-    }
+.mobile-profile-pic {
+    object-fit: cover;
+    height: 400px;
 }
 
-@media (min-width: $breakpoint-lg) {
-    h1 {
-        font-size: $font-size-xl;
-    }
-
-    .container {
-        max-width: 960px;
-    }
-
-    .mobile-only {
-        display: none;
-    }
-
-    .col {
-        width: 50%;
-    }
-
-    // Don't ask me how I came up with this.
-    :not(.col--full-width).col:nth-child(odd) {
-        width: calc((100% / 2) - $spacer-lg);
-        margin-right: $spacer-lg;
-    }
-}
-
-@media (max-width: $breakpoint-lg) {
-    .desktop-only {
-        display: none;
-    }
-}
-
-@media (min-width: $breakpoint-xl) {
-    .container { 
-        max-width: 1140px;
-    }
-}
-
-@media (min-width: $breakpoint-xxl) {
-    .container { 
-        max-width: 1320px;
-    }
+.desktop-profile-pic {
+    width: 400px;
 }
 
 #introSection {
-    padding-top: $spacer-lg;
-    padding-bottom: $spacer-lg;
+    padding-top: $m-4;
+    padding-bottom: $m-4;
     background: linear-gradient(45deg, violet, lightyellow, lightblue);
     background-size: 400%;
     animation: background 30s infinite alternate;
@@ -271,32 +55,4 @@ img {
     100% {
         background-position: right;
     }
-}
-
-.rounded-profile-pic {
-    height: 400px;
-    width: 400px;
-    border-radius: 50%;
-}
-
-.mobile-profile-pic {
-    background-image: url('./assets/images/profile-pic-cropped.jpg');
-    background-position: 0% 40%;
-    background-size: cover;
-}
-
-.mb-0 {
-    margin-bottom: 0 !important;
-}
-
-.text-primary {
-    color: blue;
-}
-
-.text-secondary {
-    color: orange;
-}
-
-.text-cta {
-    color: darkviolet;
 }
