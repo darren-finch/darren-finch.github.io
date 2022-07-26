@@ -1,0 +1,147 @@
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+$spacer-xs: 0.25rem;
+$spacer-sm: 0.5rem;
+$spacer-md: 1rem;
+$spacer-lg: 1.5rem;
+
+$border-radius: 2rem;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+section {
+    width: 100%;
+}
+
+h1 {
+    margin-top: $spacer-md;
+    margin-bottom: $spacer-md;
+}
+
+h2 {
+    margin-top: $spacer-sm;
+    margin-bottom: $spacer-sm;
+}
+
+p {
+    margin-top: $spacer-sm;
+    margin-bottom: $spacer-sm;
+}
+
+button {
+    border: none;
+    border-radius: $border-radius;
+    padding-top: $spacer-sm;
+    padding-bottom: $spacer-sm;
+    padding-left: $spacer-md;
+    padding-right: $spacer-md;
+    background-color: blue;
+    color: white;
+    display: flex-inline;
+    justify-content: center;
+    align-items: center;
+    transition: all 250ms ease-in-out;
+    
+    &:hover {
+        cursor: pointer;
+        letter-spacing: 0.1rem;
+    }
+
+    &.btn--cta {
+        background-color: darkviolet;
+        color: white;
+    }
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: calc(100% - $spacer-lg * 2);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    margin: $spacer-lg 0;
+    width: 100%;
+}
+
+.card {
+    overflow: hidden;
+    border-radius: $border-radius;
+    box-shadow: 5px 10px 20px lightblue;
+}
+
+.card__body {
+    width: 100%;
+}
+
+.card__img {
+    width: 100%;
+    height: 250px;
+}
+
+.card__content {
+    padding: $spacer-lg;
+    padding-top: $spacer-sm;
+}
+
+// .btn__arrow {
+//     color: white;
+// }
+
+@media (min-width: $breakpoint-sm) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: $breakpoint-md) {
+    .container {
+        max-width: 720px;
+    }
+
+    .mobile-only {
+        display: none;
+    }
+
+    .col {
+        width: calc((100% / 2) - $spacer-lg);
+    }
+
+    .col:nth-child(even) {
+        margin-left: $spacer-lg;
+    }
+}
+
+@media (min-width: $breakpoint-lg) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: $breakpoint-xl) {
+    .container { 
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: $breakpoint-xxl) {
+    .container { 
+        max-width: 1320px;
+    }
+}

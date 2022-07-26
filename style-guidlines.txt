@@ -1,0 +1,12 @@
+Layout:
+
+- 1 column layout on mobile
+- 2 column layout on desktop
+- Each section will be a fixed-width responsive container
+
+Grid breakpoints:
+  sm: 0
+  md: 768px
+  lg: 1400px
+
+Border radius: 2rem
