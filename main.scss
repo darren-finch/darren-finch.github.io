@@ -11,6 +11,11 @@ $spacer-lg: 1.5rem;
 
 $border-radius: 2rem;
 
+$font-size-xl: 4rem;
+$font-size-lg: 2.5rem;
+$font-size-md: 1.5rem;
+$font-size-sm: 0.75rem;
+
 * {
     margin: 0;
     padding: 0;
@@ -21,17 +26,31 @@ body {
 }
 
 section {
+    margin-top: $spacer-lg;
+    margin-bottom: $spacer-lg;
     width: 100%;
+
+    &:first-child {
+        margin-top: 0;
+    }
 }
 
 h1 {
     margin-top: $spacer-md;
     margin-bottom: $spacer-md;
+    font-size: $font-size-lg;
 }
 
 h2 {
     margin-top: $spacer-sm;
     margin-bottom: $spacer-sm;
+    font-size: $font-size-lg;
+}
+
+h3 {
+    margin-top: $spacer-sm;
+    margin-bottom: $spacer-sm;
+    font-size: $font-size-md;
 }
 
 p {
@@ -46,22 +65,39 @@ button {
     padding-bottom: $spacer-sm;
     padding-left: $spacer-md;
     padding-right: $spacer-md;
+    margin-top: $spacer-sm;
+    margin-bottom: $spacer-sm;
     background-color: blue;
     color: white;
     display: flex-inline;
     justify-content: center;
     align-items: center;
-    transition: all 250ms ease-in-out;
+    transition: box-shadow 250ms ease-in-out;
+    box-shadow: 2px 3px 10px lightblue;
+
+    &::after {
+        content: ">";
+        margin-left: $spacer-sm;
+    }
     
     &:hover {
         cursor: pointer;
-        letter-spacing: 0.1rem;
+        box-shadow: 4px 6px 10px lightblue;
     }
 
     &.btn--cta {
         background-color: darkviolet;
         color: white;
     }
+
+    &:nth-child(even) {
+        margin-left: $spacer-sm;
+    }
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
 }
 
 .container {
@@ -72,15 +108,49 @@ button {
 
 .row {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 
 .col {
     margin: $spacer-lg 0;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    &--full-width {
+        width: 100% !important;
+    }
+
+    &--stretch {
+        align-items: stretch;
+    }
+
+    &--justify-content-start {
+        justify-content: start;
+    }
+
+    &--justify-content-end {
+        justify-content: end;
+    }
+
+    &--align-items-center {
+        align-items: center;
+    }
+
+    &--align-items-end {
+        align-items: flex-end;
+    }
+
+    &--padded {
+        padding: $spacer-sm;
+    }
 }
 
 .card {
+    width: 100%;
     overflow: hidden;
     border-radius: $border-radius;
     box-shadow: 5px 10px 20px lightblue;
@@ -91,22 +161,46 @@ button {
 }
 
 .card__img {
+    margin: 0;
+    margin-bottom: -3px;
     width: 100%;
     height: 250px;
 }
 
 .card__content {
+    background-color: white;
+    margin: 0;
     padding: $spacer-lg;
-    padding-top: $spacer-sm;
 }
 
-// .btn__arrow {
-//     color: white;
-// }
+.tag {
+    border: none;
+    border-radius: $border-radius;
+    padding: $spacer-md;
+    padding-top: $spacer-sm;
+    padding-bottom: $spacer-sm;
+    margin-left: $spacer-sm;
+    color: white;
+    display: flex-inline;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 250ms ease-in-out;
+    box-shadow: 1px 2px 3px lightblue;
+    font-size: $font-size-sm;
+    letter-spacing: 0.1rem;
+
+    &:first-child {
+        margin-left: 0;
+    }
+}
 
 @media (min-width: $breakpoint-sm) {
     .container {
         max-width: 540px;
+    }
+
+    .col:nth-child(0) {
+        margin-top: 0;
     }
 }
 
@@ -114,23 +208,35 @@ button {
     .container {
         max-width: 720px;
     }
+}
+
+@media (min-width: $breakpoint-lg) {
+    h1 {
+        font-size: $font-size-xl;
+    }
+
+    .container {
+        max-width: 960px;
+    }
 
     .mobile-only {
         display: none;
     }
 
     .col {
-        width: calc((100% / 2) - $spacer-lg);
+        width: 50%;
     }
 
-    .col:nth-child(even) {
-        margin-left: $spacer-lg;
+    // Don't ask me how I came up with this.
+    :not(.col--full-width).col:nth-child(odd) {
+        width: calc((100% / 2) - $spacer-lg);
+        margin-right: $spacer-lg;
     }
 }
 
-@media (min-width: $breakpoint-lg) {
-    .container {
-        max-width: 960px;
+@media (max-width: $breakpoint-lg) {
+    .desktop-only {
+        display: none;
     }
 }
 
@@ -144,4 +250,43 @@ button {
     .container { 
         max-width: 1320px;
     }
+}
+
+#introSection {
+    padding-top: $spacer-lg;
+    padding-bottom: $spacer-lg;
+    background: linear-gradient(45deg, violet, lightyellow, lightblue);
+    background-size: 400%;
+    animation: background 30s infinite alternate;
+}
+
+@keyframes background {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
+.rounded-profile-pic {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.text-primary {
+    color: blue;
+}
+
+.text-secondary {
+    color: orange;
+}
+
+.text-cta {
+    color: darkviolet;
 }
