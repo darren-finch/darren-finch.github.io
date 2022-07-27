@@ -1,218 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Darren Finch</title>
-    <link rel="stylesheet" href="./main.css" />
-    <script src="./index.js"></script>
-  </head>
-  <body>
-	<header>
-		<nav class="navbar navbar-expand-lg bg-light">
-			<div class="container">
-				<div class="w-100 d-flex justify-content-between">
-					<a class="navbar-brand text-primary" href="#">DF</a>
-				  	<ul class="navbar-nav me-0 my-auto">
-						<div class="nav-item">
-							<a href="#" class="nav-link ps-0">Home</a>
-						</div>
-						<div class="nav-item">
-							<a href="#" class="nav-link">Projects</a>
-						</div>
-						<div class="nav-item">
-							<a href="#" class="nav-link">Skills</a>
-						</div>
-						<div class="nav-item">
-							<a href="#" class="nav-link">About</a>
-						</div>
-						<div class="nav-item">
-							<a href="#" class="nav-link pe-0">Contact</a>
-						</div>
-					</ul>
+  	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Darren Finch</title>
+		<base href=".">
+		<link rel="stylesheet" href="./main.css" />
+		<script type="module" src="./index.js"></script>
+		<link rel="shortcut icon" href="./assets/icons/react.png" type="image/x-icon">
+  	</head>
+	<body>
+		<header id="home">
+			<nav class="navbar navbar-expand-lg bg-light">
+				<div class="container">
+					<a class="navbar-brand text-primary" href="javascript:void(0)">DF</a>
+					<button class="navbar-toggler my-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<div class="collapse navbar-collapse justify-content-lg-end" id="collapsingContent">
+						<ul class="navbar-nav mb-2 mb-lg-0">
+							<li class="nav-item"><a class="nav-link" href="javascript:void(0)">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="#projectsSection">Projects</a></li>
+							<li class="nav-item"><a class="nav-link" href="#skillsSection">Skills</a></li>
+							<li class="nav-item"><a class="nav-link" href="#aboutSection">About</a></li>
+							<li class="nav-item"><a class="nav-link" href="#contactSection">Contact</a></li>
+						</ul>
+					</div>
 				</div>
-			</div>
-		</nav>
-	</header>
-    <section id="introSection">
-      <div class="container">
-        <div class="row d-lg-none">
-          <div class="col">
-			<div class="card">
-				<img src="./assets/images/profile-pic-cropped.jpg" class="mobile-profile-pic card-img-top" alt="Project screenshot" />
-				<div class="card-body">
-				  <h3 class="card-title">Hi, I'm Darren, a front-end developer & designer.</h3>
-				  <p class="card-text">
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-					Error, dignissimos distinctio quos nulla quod quas harum et corrupti numquam laudantium?
-				  </p>
-				  <a href="#" class="btn btn-secondary btn-arrow"></a>
-				</div>
-			  </div>
-            </article>
-          </div>
-        </div>
-        <div class="d-none d-lg-flex justify-content-center align-items-center row row-cols-2 g-4">
-          <img
-            src="./assets/images/profile-pic-cropped.jpg"
-            alt="My profile picture"
-            class="desktop-profile-pic rounded-circle"
-          />
-		  <div class="d-flex flex-column align-items-start">
-			<h1>Hi, I'm Darren, a front-end developer & designer.</h1>
-			<p>
-			  Lorem ipsum dolor sit amet consectetur adipisicing elit. In cum
-			  maxime modi accusantium porro cupiditate dolorum eaque alias facere
-			  provident.
-		  	</p>
-		  	<button type="button" class="btn btn-secondary btn-arrow">View Projects</button>
-		  </div>
-        </div>
-      </div>
-    </section>
-    <section id="projectsSection">
-      	<div class="container">
-        	<div class="row mt-4">
-				<div class="col">
-					<h2>Projects</h2>
-				</div>
-			</div>
-			<div class="row row-cols-1 row-cols-lg-2 g-4">
-				<div class="col">
-					<article class="card">
-						<img src="https://picsum.photos/id/10/800/600" class="card-img-top" alt="Project screenshot" />
-						<div class="card-body">
-							<h3 class="card-title">Project Name</h3>
+			</nav>
+		</header>
+		<main>
+			<section id="introSection">
+				<div class="container">
+					<div class="row d-lg-none">
+					<div class="col">
+						<div class="card">
+							<img src="./assets/images/profile-pic-cropped.jpg" class="mobile-profile-pic card-img-top" alt="Project screenshot" />
+							<div class="card-body">
+							<h3 class="card-title">Hi, I'm Darren, a front-end developer & designer.</h3>
 							<p class="card-text">
 								Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
 								Error, dignissimos distinctio quos nulla quod quas harum et corrupti numquam laudantium?
 							</p>
-							<a href="#" class="btn btn-primary">View Site</a>
-							<a href="#" class="btn btn-secondary">View Code</a>
-						</div>
-					</article>
-				</div>
-				<div class="col">
-					<article class="card">
-						<img src="https://picsum.photos/id/10/800/600" class="card-img-top" alt="Project screenshot" />
-						<div class="card-body">
-							<h3 class="card-title">Project Name</h3>
-							<p class="card-text">
-								Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-								Error, dignissimos distinctio quos nulla quod quas harum et corrupti numquam laudantium?
-							</p>
-							<a href="#" class="btn btn-primary">View Site</a>
-							<a href="#" class="btn btn-secondary">View Code</a>
-						</div>
-					</article>
-				</div>
-			</div>
-        </div>
-    </section>
-	<section id="skillsSection">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<article class="card">
-						<div class="card-body">
-							<h3 class="card-title">My Skills</h3>
-							<div class="row-cols-3 row-cols-lg-6">
-								<div class="col">
-									
-								</div>
-								<div class="col">
-									
-								</div>
-								<div class="col">
-									
-								</div>
-								<div class="col">
-									
-								</div>
-								<div class="col">
-									
-								</div>
-								<div class="col">
-									
-								</div>
+							<a href="#projectsSection" class="btn btn-secondary btn-arrow">View Projects</a>
 							</div>
-							<a href="#" class="btn btn-primary">Hire Me</a>
 						</div>
-					</article>
+						</article>
+					</div>
+					</div>
+					<div class="d-none d-lg-flex justify-content-center align-items-center row row-cols-2 g-4">
+					<img
+						src="./assets/images/profile-pic-cropped.jpg"
+						alt="My profile picture"
+						class="desktop-profile-pic rounded-circle"
+					/>
+					<div class="d-flex flex-column align-items-start">
+						<h1>Hi, I'm Darren, a front-end developer & designer.</h1>
+						<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. In cum
+						maxime modi accusantium porro cupiditate dolorum eaque alias facere
+						provident.
+						</p>
+						<a href="#projectsSection" class="btn btn-secondary btn-arrow">View Projects</a>
+					</div>
+					</div>
 				</div>
-			</div>
-		</div>
-    </section>
-    <section id="aboutSection">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<article class="card">
-						<div class="card-body">
-							<h3 class="card-title">About Me</h3>
-							<p class="card-text">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius tempore reiciendis dolorem vitae distinctio qui, 
-								consectetur provident, repellendus voluptas quos quis inventore consequuntur doloremque consequatur cupiditate, 
-								asperiores sapiente a reprehenderit? Omnis, temporibus alias architecto 
-								ipsum non quisquam ducimus aspernatur officiis praesentium reiciendis in, officia eveniet beatae qui expedita eum. Sequi.
-							</p>
-							<a href="#" class="btn btn-primary">Hire Me</a>
+			</section>
+			<section id="projectsSection">
+				<div class="container">
+					<div class="row mt-4">
+						<div class="col">
+							<h2>Projects</h2>
 						</div>
-					</article>
-				</div>
-			</div>
-		</div>
-    </section>
-    <section id="contactSection">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<article class="card">
-						<div class="card-body">
-							<h3>Contact Me</h3>
-							<form action="https://mailthis.to/dmf_2004" method="POST" encType="multipart/form-data">
-								<div class="mb-3">
-									<label for="nameInput" class="form-label">Name</label>
-									<input type="text" class="form-control" id="nameInput" name="name" placeholder="Enter your name here">
+					</div>
+					<div class="row row-cols-1 row-cols-lg-2 g-4">
+						<div class="col">
+							<article class="card">
+								<img src="https://picsum.photos/id/10/800/600" class="card-img-top" alt="Project screenshot" />
+								<div class="card-body">
+									<h3 class="card-title">Project Name</h3>
+									<p class="card-text">
+										Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+										Error, dignissimos distinctio quos nulla quod quas harum et corrupti numquam laudantium?
+									</p>
+									<a href="#" class="btn btn-primary">View Site</a>
+									<a href="#" class="btn btn-secondary">View Code</a>
 								</div>
-								<div class="mb-3">
-								  <label for="emailInput" class="form-label">Email address</label>
-								  <input type="email" class="form-control" id="emailInput" name="_replyto" aria-describedby="emailHelp" placeholder="youremail@provider.com">
-								</div>
-								<div class="mb-3">
-									<label for="messageInput" class="form-label">Message</label>
-									<textarea id="messageInput" class="form-control" name="message" placeholder="Enter your message here"></textarea>
-								</div>
-								<button type="submit" value="Send" class="btn btn-primary">Submit</button>
-							</form>
+							</article>
 						</div>
-					</article>
+						<div class="col">
+							<article class="card">
+								<img src="https://picsum.photos/id/10/800/600" class="card-img-top" alt="Project screenshot" />
+								<div class="card-body">
+									<h3 class="card-title">Project Name</h3>
+									<p class="card-text">
+										Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+										Error, dignissimos distinctio quos nulla quod quas harum et corrupti numquam laudantium?
+									</p>
+									<a href="#" class="btn btn-primary">View Site</a>
+									<a href="#" class="btn btn-secondary">View Code</a>
+								</div>
+							</article>
+						</div>
+					</div>
 				</div>
+			</section>
+			<section id="skillsSection">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<article class="card">
+								<div class="card-body">
+									<h3 class="card-title">My Skills</h3>
+									<div class="row-cols-3 row-cols-lg-6">
+										<div class="col">
+											
+										</div>
+										<div class="col">
+											
+										</div>
+										<div class="col">
+											
+										</div>
+										<div class="col">
+											
+										</div>
+										<div class="col">
+											
+										</div>
+										<div class="col">
+											
+										</div>
+									</div>
+									<a href="#aboutSection" class="btn btn-primary">More About Me</a>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="aboutSection">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<article class="card">
+								<div class="card-body">
+									<h3 class="card-title">About Me</h3>
+									<p class="card-text">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius tempore reiciendis dolorem vitae distinctio qui, 
+										consectetur provident, repellendus voluptas quos quis inventore consequuntur doloremque consequatur cupiditate, 
+										asperiores sapiente a reprehenderit? Omnis, temporibus alias architecto 
+										ipsum non quisquam ducimus aspernatur officiis praesentium reiciendis in, officia eveniet beatae qui expedita eum. Sequi.
+									</p>
+									<a href="#contactSection" class="btn btn-primary">Hire Me</a>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			   </section>
+			<section id="contactSection">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<article class="card">
+							<div class="card-body">
+								<h3>Contact Me</h3>
+									<form action="https://mailthis.to/dmf_2004" method="POST" encType="multipart/form-data">
+										<div class="mb-3">
+											<label for="nameInput" class="form-label">Name</label>
+											<input type="text" class="form-control" id="nameInput" name="name" placeholder="Enter your name here">
+										</div>
+										<div class="mb-3">
+										<label for="emailInput" class="form-label">Email address</label>
+										<input type="email" class="form-control" id="emailInput" name="_replyto" aria-describedby="emailHelp" placeholder="youremail@provider.com">
+										</div>
+										<div class="mb-3">
+											<label for="messageTextArea" class="form-label">Message</label>
+											<textarea id="messageTextArea" class="form-control" name="message" placeholder="Enter your message here"></textarea>
+										</div>
+										<button type="submit" value="Send" class="btn btn-primary">Submit</button>
+									</form>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>	
+		</main>
+		<footer class="w-100 border-top">
+			<div class="container py-3 my-4">
+				<ul class="nav justify-content-center border-bottom pb-3 mb-3">
+					<li class="nav-item"><a href="#home" class="nav-link px-2 text-muted">Home</a></li>
+					<li class="nav-item"><a href="#projectsSection" class="nav-link px-2 text-muted">Projects</a></li>
+					<li class="nav-item"><a href="#skillsSection" class="nav-link px-2 text-muted">Skills</a></li>
+					<li class="nav-item"><a href="#aboutSection" class="nav-link px-2 text-muted">About</a></li>
+					<li class="nav-item"><a href="#contactSection" class="nav-link px-2 text-muted">Contact</a></li>
+				</ul>
+				<p class="text-center text-muted">© 2022, Darren Finch</p>
 			</div>
-		</div>
-    </section>
-  </body>
-  <footer class="w-100 border">
-	<div class="d-none d-lg-block container">
-		<nav class="nav justify-content-center">
-			<a href="https://www.flaticon.com/free-icons/react" title="react icons">React icons created by Freepik - Flaticon</a>
-			<a href="#" class="nav-link ps-0">Home</a>
-			<a href="#" class="nav-link">Projects</a>
-			<a href="#" class="nav-link">Skills</a>
-			<a href="#" class="nav-link">About</a>
-			<a href="#" class="nav-link pe-0">Contact</a>
-		</nav>
-    </div>
-    <div class="d-lg-none container">
-		<nav class="nav justify-content-center">
-			<a href="https://www.flaticon.com/free-icons/react" title="react icons">React icons created by Freepik - Flaticon</a>
-			<a href="#" class="nav-link ps-0">Home</a>
-			<a href="#" class="nav-link">Projects</a>
-			<a href="#" class="nav-link">Skills</a>
-			<a href="#" class="nav-link">About</a>
-			<a href="#" class="nav-link pe-0">Contact</a>
-		</nav>
-    </div>
-  </footer>
+		</footer>
+	</body>
 </html>
