@@ -1,6 +1,10 @@
 @import "./variables.scss";
 @import "./node_modules/bootstrap/scss/bootstrap.scss";
 
+body {
+    min-width: 320px;
+}
+
 section {
     margin-bottom: $m-4;
 }
@@ -57,19 +61,38 @@ section {
     font-size: xx-large;
 }
 
+.social-icon {
+    padding: 0;
+    width: 24px;
+}
+
 .card {
     background-color: white;
     border: none;
     box-shadow: 3px 5px 10px lightgray;
 }
 
+.card-img-top {
+    height: 250px;
+}
+
+.card-footer {
+    background-color: transparent;
+    border: none;
+}
+
 .btn {
     box-shadow: 1px 2px 3px lightgray;
-    
+
     &-arrow::after {
         content: ">";
-        margin-left: $spacer;
+        margin-left: $spacer * 0.5;
+        transition: all 250ms ease-in-out;
     }
+}
+
+.btn:hover.btn-arrow::after {
+    margin-left: $spacer * 1;
 }
 
 .form-control {
@@ -103,5 +126,26 @@ textarea.form-control {
     }
     100% {
         background-position: right;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .projects-card-wrap {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .projects-card {
+        width: 50%;
+    }
+
+    .projects-card:nth-child(odd) {
+        width: calc(50% - ($spacer * 1.5));
+        margin-right: $spacer * 1.5;
+    }
+
+    .card-img-top {
+        height: 400px;
     }
 }
