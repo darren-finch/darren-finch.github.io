@@ -1,5 +1,6 @@
-import * as $ from "./node_modules/jquery/dist/jquery.js";
-import * as bootstrap from "./node_modules/bootstrap/dist/js/bootstrap.js";
+import "jquery";
+import "bootstrap";
+import "./main.css"
 
 document.addEventListener("DOMContentLoaded", () => {
 	const navbarToggler = document.querySelector(".navbar-toggler");

@@ -2,9 +2,12 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "My portfolio site.",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "builddev": "webpack --config webpack.config.js --mode=development",
+    "buildprod": "webpack --config webpack.config.js --mode=production",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -15,11 +18,20 @@
   "bugs": {
     "url": "https://github.com/darren-finch/portfolio/issues"
   },
-  "homepage": "https://github.com/darren-finch/portfolio#readme",
+  "homepage": "https://github.com/darren-finch/portfolio",
   "dependencies": {
     "@popperjs/core": "^2.11.5",
     "bootstrap": "^5.2.0",
     "bootstrap-icons": "^1.9.1",
     "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "gh-pages": "^4.0.0",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^4.10.0"
   }
 }
