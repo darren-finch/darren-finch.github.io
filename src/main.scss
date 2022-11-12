@@ -1,5 +1,5 @@
 @import "./variables.scss";
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/bootstrap.scss"; // THIS NEEDS TO BE UPDATED WHEN SASS-LOADER UPDATES SO WE CAN USE SASS-LOADER.
 
 body {
     min-width: 320px;
