@@ -1,0 +1,1 @@
+import"jquery";import"bootstrap";import"./main.css";document.addEventListener("DOMContentLoaded",(()=>{const t=document.querySelector(".navbar-toggler");t.addEventListener("click",(()=>{t.classList.contains("active")?t.classList.remove("active"):t.classList.add("active")}))}));
