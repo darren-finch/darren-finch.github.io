@@ -20,17 +20,17 @@
   },
   "homepage": "https://github.com/darren-finch/portfolio",
   "dependencies": {
-    "@popperjs/core": "^2.11.5",
-    "bootstrap": "^5.2.0",
-    "bootstrap-icons": "^1.9.1",
-    "jquery": "^3.6.0"
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.3",
+    "jquery": "^3.6.3"
   },
   "devDependencies": {
-    "css-loader": "^6.7.1",
+    "css-loader": "^6.7.3",
     "gh-pages": "^4.0.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
-    "sass": "^1.56.1",
+    "sass": "^1.57.1",
     "style-loader": "^3.3.1",
     "webpack": "^5.75.0",
     "webpack-cli": "^4.10.0",
